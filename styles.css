@@ -1,3 +1,8 @@
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* VARIABLES */
 :root {
     --body-background: white;
     --content-box-shadows: 5px 5px 10px 5px #000000;
@@ -5,8 +10,10 @@
     --button-box-shadows: 5px 5px 6px 0px rgba(0,0,0,0.6);
     --intro-background-colour: #d9f99d;
     --sidebar-background-color: #0d9488;
+    --fonts: "Oswald", Arial, Helvetica, sans-serif;
 }
 
+/* BODY RESET AND FONTS */
 body {
     margin: 0px;
     padding: 0px;
@@ -14,9 +21,10 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
+    font-family: var(--fonts)
 }
 
-
+/* BASE GRID */
 
 .container {
     display: grid;
@@ -24,6 +32,8 @@ body {
     grid-template-rows: 125px 8fr;
     height: 100%;
 }
+
+/* HEADER SECTION */
 
 .header {
     grid-column: 2;
@@ -53,7 +63,8 @@ body {
 }
 
 .icons > svg:hover {
-    background-color: var(--sidebar-background-color);
+   fill: orange;
+   cursor: pointer;
 }
 
 .icons > img {
@@ -68,6 +79,12 @@ body {
     font-size: 20px;
 }
 
+.icons > span:hover {
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .search-bar > input {
     width: 40%;
     height: 25px;
@@ -75,12 +92,19 @@ body {
     background-color: rgb(231, 231, 231);
     border: none;
     margin-left: 7px;
-    
+    font-family: var(--fonts);
+    padding-left: 10px; /*Sets padding on the text inside an input field */
 }
+
 .search-bar > svg {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     margin-left: 10px;
+}
+
+.search-bar > svg:hover {
+    fill: orange;
+    cursor: pointer;
 }
 
 .header-bottom {
@@ -129,17 +153,20 @@ button  {
     border: 2px solid white;
     font-size: 15px;
     box-shadow: var(--button-box-shadows);
+    font-family: var(--fonts)
 
 }
 
 button:hover {
-    background-color: #65a30d;
+    background-color: orange;
     cursor: pointer;
 }
 
 button:active {
     background-color: #d9f99d;
 }
+
+/* SIDEBAR SECTION */
 
 .sidebar {
     background-color: var(--sidebar-background-color);
@@ -151,7 +178,7 @@ button:active {
 .sidebar > p {
     margin-top: 10px;
     font-size: 34px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .sidebar svg {
@@ -164,13 +191,16 @@ button:active {
     list-style: none;
 }
 li {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 li:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: orange;
 }
+
+/* MAIN CONTENT SECTION */
 
 .content {
     background-color: var(--body-background);
@@ -210,6 +240,29 @@ li:hover {
     padding: 0px 5px;
     box-shadow: var(--content-box-shadows);
     border: 4px solid #d9f99d;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+}
+
+.card-icons {
+    justify-self: end;
+}
+
+.card-icons > svg {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+
+.card-icons > svg:hover {
+    fill: orange;
+    cursor: pointer;
+}
+
+.card-text > h4:hover {
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .content-side {
