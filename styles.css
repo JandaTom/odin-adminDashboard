@@ -74,13 +74,13 @@ body {
     border-radius: 10px;
     background-color: rgb(231, 231, 231);
     border: none;
-    margin-left: 3px;
+    margin-left: 7px;
     
 }
 .search-bar > svg {
     height: 20px;
     width: 20px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .header-bottom {
@@ -103,6 +103,18 @@ body {
     margin-left: 15px;
 }
 
+.introduction span {
+    margin-left: 10px;
+    /* Name in the welcome message can be moved to be even with the "Hi there," part either using negative margin or smarter use of selectors, 
+       but I think it looks better this way */
+}
+
+.welcome-message {
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+}
+
 .buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -122,6 +134,7 @@ button  {
 
 button:hover {
     background-color: #65a30d;
+    cursor: pointer;
 }
 
 button:active {
@@ -132,20 +145,31 @@ button:active {
     background-color: var(--sidebar-background-color);
     grid-column: 1;
     grid-row: 1 / span 2;
-    display: flex;
-    color: black
+    display: grid;
+    grid-template-rows: 80px 1fr 1fr 1fr;
 }
-.sidebar > h3 {
-    margin-top:5px;
+.sidebar > p {
+    margin-top: 10px;
+    font-size: 34px;
+    margin-left: 5px;
 }
 
 .sidebar svg {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
 }
 
 .sidebar > ul {
-    list-style: armenian;
+    list-style: none;
+}
+li {
+    font-size: 28px;
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .content {
