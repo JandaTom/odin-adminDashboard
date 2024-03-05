@@ -13,7 +13,7 @@
     --fonts: "Oswald", Arial, Helvetica, sans-serif;
 }
 
-/* BODY RESET AND FONTS */
+/* BODY RESET FONTS and LINK CREDIT */
 body {
     margin: 0px;
     padding: 0px;
@@ -22,6 +22,13 @@ body {
     height: 100%;
     width: 100%;
     font-family: var(--fonts)
+}
+a {
+    color: orange;
+}
+
+a:visited {
+    color: rgb(204, 134, 4);
 }
 
 /* BASE GRID */
@@ -209,6 +216,7 @@ li:hover {
     display: grid;
     grid-template-columns: 4fr 1fr;
     padding-bottom: 10px;
+    gap: 30px; /* Serves as an insurance for shadow overlaping when changing screen size */
 }
 
 .content-center {
@@ -259,6 +267,10 @@ li:hover {
     cursor: pointer;
 }
 
+.card-text > p {
+    color: rgb(80, 80, 80);
+}
+
 .card-text > h4:hover {
     color: orange;
     text-decoration: underline;
@@ -270,7 +282,7 @@ li:hover {
     display: grid;
 }
 
-.annonouncements {
+.announcements {
     background-color: var(--body-background);
     display: grid;
     grid-template-rows: 50px 1fr;
@@ -278,7 +290,7 @@ li:hover {
     justify-content: center;
 }
 
-.annonouncements-content {
+.announcements-card, .trending-card {
     height: clamp(150px, 240px, 400px);
     width: clamp(180px, 250px, 450px);
     background-color: white;
@@ -286,6 +298,38 @@ li:hover {
     border-radius: 10px;
     box-shadow: var(--content-box-shadows-lesser);
     border: 4px solid #d9f99d;
+}
+
+.announcements-card  p, .trending-card > p, .announcements-card h4 {
+    margin: 0;
+    padding-left: 10px;
+    margin-top: 3px;
+}
+
+.announcements-card p {
+    color: gray;
+    font-size: 14px;
+}
+.announcements-card h4:hover {
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.announcements-card {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr)
+}
+
+.announcements-content-top {
+    border-bottom: 2px solid var(--sidebar-background-color);
+}
+
+
+.trending-card {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
 }
 
 .trending {
@@ -296,7 +340,40 @@ li:hover {
     justify-content: center;
 }
 
-.annonouncements-content > p {
-    margin: 0;
-    padding-left: 5px;
+.trending-content {
+    display: grid;
+    grid-template-columns: 40px 1fr;
 }
+
+.trending-content > img {
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    margin-left: 15px;
+}
+
+.trending-content-text > p, .trending-content-text > h5 {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.trending-content-text > p:hover, .trending-content-text > h5:hover {
+    color: orange;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.trending-content-text > p {
+    color: rgb(80, 80, 80);
+}
+
+
+/* Truncates text with ellipsis, at the line number defined in webkit-line-clamp, code copied from https://css-tricks.com/line-clampin/ and modified*/
+.truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    hyphens: auto;
+    }
+
