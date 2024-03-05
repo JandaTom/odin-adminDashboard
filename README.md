@@ -1,2 +1,2 @@
 # odin-adminDashboard
-CSS Grid practice
+CSS Grid practice, accessible from https://jandatom.github.io/odin-adminDashboard/

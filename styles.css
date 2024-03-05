@@ -243,7 +243,7 @@ li:hover {
 .card {
     background-color: white;
     height: clamp(150px, 250px, 400px);
-    width: clamp(200px, 330px, 500px);
+    width: clamp(200px, 300px, 500px);
     border-radius: 10px;
     padding: 0px 5px;
     box-shadow: var(--content-box-shadows);
