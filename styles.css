@@ -379,3 +379,28 @@ li:hover {
     hyphens: auto;
     }
 
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 5fr;
+    }
+
+    .welcome-message {
+        display: inline;
+        font-size: 18px;
+        margin-left: 0 px;
+    }
+
+    .sidebar > p {
+        font-size: 22px;
+    }
+
+    li {
+        font-size: 24px;
+    }
+
+    .content-side {
+        display: grid;
+        grid-template-rows: 400px 400px;
+    }
+    
+}
