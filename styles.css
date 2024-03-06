@@ -387,7 +387,11 @@ li:hover {
     .welcome-message {
         display: inline;
         font-size: 18px;
-        margin-left: 0 px;
+        margin-left: 0px;
+    }
+
+    .introduction span {
+        margin-left: 3px;
     }
 
     .sidebar > p {
