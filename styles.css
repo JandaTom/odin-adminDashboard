@@ -379,6 +379,8 @@ li:hover {
     hyphens: auto;
     }
 
+/* MEDIA QUERIES */
+
 @media (max-width: 960px) {
 
     .welcome-message {
@@ -406,6 +408,11 @@ li:hover {
 
     .announcements-card, .trending-card {
         margin-top: 15px;
+    }
+
+    .introduction > img {
+        height: 40px;
+        width: 40px;
     }
     
 }
